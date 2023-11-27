@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* reset */
+* {
+margin: 0;
+padding: 0;
+}
+
+div{
+  color: rgb(113, 114, 110);
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 20px;
+  font-weight: bolder;
+
+}
+#wrapper {
+position: absolute;
+width: 100%;
+height: 100%;
+overflow: hidden;
+}
+
+label {
+cursor: pointer;
+}
+label:focus {
+outline: none;
+}
+
+.menu {
+position: absolute;
+top: 0;
+left: 0;
+background: #fff;
+width: 80%;
+height: 100%;
+transform: translate3d(-100%, 0, 0);
+transition: transform 0.35s;
+}
+
+.menu label.menu-toggle {
+position: absolute;
+right: -60px;
+width: 60px;
+height: 60px;
+line-height: 0;
+display: block;
+padding: 0;
+text-indent: -9999px;
+border-radius: 5px;
+background: #fff url(https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png) 50% 50% / 25px 25px no-repeat;
+}
+
+.menu ul li > label {
+background: url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-arrow-right-b-128.png) 95% 50% / 16px 16px no-repeat;
+}
+
+.menu a,
+.menu label {
+display: block;
+text-align: center;
+padding: 0 20px;
+line-height: 60px;
+text-decoration: none;
+color: #000;
+}
+.menu a:hover,
+.menu label:hover {
+color: #666;
+}
+
+/* hide inputs */
+.menu-checkbox {
+display: none;
+}
+
+/* hide navigation icon for sublabels */
+.menu .menu label.menu-toggle {
+background: none;
+}
+
+/* fade in checked menu */
+.menu-checkbox:checked + .menu {
+transform: translate3d(0, 0, 0);
+}
+
+/* for show */
+html, body {
+height: 100%;
+}
+
+body {
+background-color: black;
+}
+
+p {
+margin-bottom: 15px;
+}
+
+#info {
+display: table;
+background: rgba(0, 0, 0, 0.4);
+height: 100%;
+width: 100%;
+}
+#info #info-content {
+display: table-cell;
+vertical-align: middle;
+text-align: center;
+text-transform: uppercase;
+color: #fff;
+font-size: 12px;
+}
+#info #info-content h1 {
+color: #fff;
+border: 3px solid #fff;
+text-align: center;
+background: rgba(0, 0, 0, 0.1);
+font-size: 22px;
+font-weight: normal;
+padding: 20px;
+margin: 10px;
+display: inline-block;
+}
+#info #info-content h1 strong {
+display: block;
+font-size: 26px;
+}
+.phy{
+font-size: 13px;
+padding-bottom: 2%;
+}
+  </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="info">
+          <div id="info-content">
+            <h1><strong>Abasaheb Garware College</strong></h1>
+            <p></p>
+          </div>
+        </div>
+      
+        <input type="checkbox" id="menu" name="menu" class="menu-checkbox">
+        <div class="menu">
+          <label class="menu-toggle" for="menu"><span>Toggle</span></label>
+          <ul>
+            <li>
+              <a href="#">SEM-5</a>
+            </li>
+            <li>      
+              <label for="menu-3">Physics-I</label>
+              <input type="checkbox" id="menu-3" name="menu-3" class="menu-checkbox">
+              <div class="menu">
+                <label class="menu-toggle" for="menu-3"><span>Toggle</span></label>
+                <ul><br><br<br><br>
+                  <li>
+                    <a href="#" class="phy"> 1] 'Y' By Vibration</a>
+                  </li>
+                  <li>
+                    <a href="#" class="phy">2] Anderson Bridge</a>
+                    </li>
+                    
+                  <li>
+                    <a href="#" class="phy">3] Bifilar Suspension</a>
+                  </li>
+                  <li>
+                    <a href="#" class="phy">4] Fergusson Method</a>
+                  </li>
+                  <li>
+                    <a href="#" class="phy">5] Quincke's Method</a>
+                  </li>
+                  <li>
+                    <a href="#" class="phy">6] Grating</a>
+                  </li>
+                  <li>
+                    <a href="#" class="phy">7] Lloyd's Mirror</a>
+                  </li>
+                  <li>
+                    <a href="#" class="phy">8] Core loses</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <label for="menu-4">Physics-II</label>
+              <input type="checkbox" id="menu-3" name="menu-3" class="menu-checkbox">
+              <div class="menu">
+                <label class="menu-toggle" for="menu-3"><span>Toggle</span></label>
+                <ul>
+                  <li>
+                    <a href="#" class="phy"> 1] Introduction to C-Programming</a>
+                  </li>
+                  <li>
+                    <a href="#" class="phy">2] Factorial of a Number</a>
+                    </li>
+                    
+                  <li>
+                    <a href="#" class="phy">3] Position-Time using Kinematical Eqautions</a>
+                  </li>
+                  <li>
+                    <a href="#" class="phy">4] Van der waal's eqaution</a>
+                  </li>
+                  <li>
+                    <a href="#" class="phy">5] Newton-Raphson Method</a>
+                  </li>
+                  <li>
+                    <a href="#" class="phy">6] Simpson's <sup>1/3</sup>Rule</a>
+                  </li>
+                  <li>
+                    <a href="#" class="phy">7] Lloyd's Mirror</a>
+                  </li>
+                  <li>
+                    <a href="#" class="phy">8] Core loses</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            </li> 
+            <li><br><br><br>
+              <a href="#">SEM-6</a>
+            </li>     
+            <label for="menu-3">Physics-I</label>
+              <input type="checkbox" id="menu-3" name="menu-3" class="menu-checkbox">
+              <div class="menu">
+                <label class="menu-toggle" for="menu-3"><span>Toggle</span></label>
+                <li>      
+                  <label for="menu-3">Physics-I</label>
+                  <input type="checkbox" id="menu-3" name="menu-3" class="menu-checkbox">
+                  <div class="menu">
+                    <label class="menu-toggle" for="menu-3"><span>Toggle</span></label>
+                    <ul><br><br<br><br>
+                      <li>
+                        <a href="#" class="phy"> 1] program</a>
+                      </li>
+                      <li>
+                        <a href="#" class="phy">2] program</a>
+                        </li>
+                        
+                      <li>
+                        <a href="#" class="phy">3] program</a>
+                      </li>
+                      <li>
+                        <a href="#" class="phy">4] program</a>
+                      </li>
+                      <li>
+                        <a href="#" class="phy">5] program</a>
+                      </li>
+                      <li>
+                        <a href="#" class="phy">6]program</a>
+                      </li>
+                      <li>
+                        <a href="#" class="phy">7]program</a>
+                      </li>
+                      <li>
+                        <a href="#" class="phy">8] Core loses</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </div>
+            </li>
+            
+            <li>
+              <label for="menu-5">Physics-II</label>
+              <input type="checkbox" id="menu-5" name="menu-5" class="menu-checkbox">
+              <div class="menu">
+                <label class="menu-toggle" for="menu-5"><span>Toggle</span></label>
+                <ul>
+                  <li>
+                    <a href="#">1 best</a>
+                  </li>
+                  <li>
+                    <a href="#">2 shit</a>
+                  </li>
+                  <li>
+                    <a href="#">3 lmao</a>
+                  </li>
+                  <li>
+                    <a href="#">4 ily</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+      </div><!-- #wrapper -->
+</body>
+</html>
