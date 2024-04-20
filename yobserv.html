@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.min.css"> 
     <style>
         /* Add some basic styling to the table */
-        
+        table {
+            width: 100%;
+            border-radius: 10px;
+        }
+        /* Apply rounded border to the table */
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 20px; /* Adjust the value to control the roundness */
+            border: 2px solid #000; /* Add a border to the table */
+        }
+
+        /* Style the table cells */
+        table td, table th {
+            padding: 7px; /* Add padding to the cells for better spacing */
+            border: 0.1px solid #565454; /* Add a border to the table cells */
+        }
 
         th, td {    
             border: 1px solid #ddd;
@@ -21,10 +35,21 @@
             background-color: #000000;
             color: white;
         }
+        tr{
+            background-color: #dedfa6;
+        }
+
+        .editable {
+            background: transparent;
+            cursor: pointer;
+        }
+        form{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <h2>Observation Table:</h2><br><br>
+    <h2>Observation Table:</h2>
     <div id="report-content">
 
     <table style="border-radius: 10px; ">
@@ -136,7 +161,7 @@
 </div>
 <button onclick="generatePDF()">Generate PDF</button>
 
-<button><a href="yobserv.html"></a></button>
+<button><a href="yobserv.html">Lmao</a></button>
 
 <script>
     // Get all the rows
